@@ -2,22 +2,45 @@
 <html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>فروشگاه هنزا</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style.css" rel="stylesheet">
+  <title>هنزا مارکت | فروشگاه ابزار برش سنگ و سرامیک</title>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>فروشگاه هنزا</h1>
-    <a href="admin.html" class="admin-link">ورود مدیر</a>
+    <h1>هنزا مارکت</h1>
+    <p>بزرگترین واردکننده و توزیع‌کننده‌ ی ملزومات حرفه‌ای برش سنگ و سرامیک</p>
   </header>
+
   <main>
-    <div id="product-list" class="product-list"></div>
+    <div class="product-list" id="product-list">
+      <!-- محصولات از Firebase بارگذاری می‌شوند -->
+    </div>
   </main>
 
+  <footer>
+    <p>© 2025 هنزا مارکت | تمامی حقوق محفوظ است</p>
+  </footer>
+
+  <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+  <!-- اتصال Firebase -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCLLxGoXKHON91hM4VlztO_Bme4L2UFxz4",
+      authDomain: "heneza-6e5c4.firebaseapp.com",
+      projectId: "heneza-6e5c4",
+      storageBucket: "heneza-6e5c4.appspot.com",
+      messagingSenderId: "1076999155269",
+      appId: "1:1076999155269:web:e0b9faef9b0cecb3f97d2c"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- فایل اسکریپت -->
   <script src="script.js"></script>
 </body>
 </html>
