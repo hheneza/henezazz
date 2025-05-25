@@ -1,33 +1,27 @@
-<!DOCTYPE html>
-<html lang="fa">
+<!DOCTYPE html><html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <title>پنل مدیریت</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="style.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پنل مدیریت - هنزا مارکت</title>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div id="login-box">
-    <h2>ورود مدیر</h2>
-    <input type="email" id="adminEmail" placeholder="ایمیل">
-    <input type="password" id="adminPassword" placeholder="رمز عبور">
-    <button onclick="login()">ورود</button>
-    <p id="loginError"></p>
-  </div>
-
-  <div id="dashboard" style="display:none;">
-    <h2>افزودن محصول</h2>
+<body><header>پنل مدیریت هنزا مارکت</header><div id="admin-login-box">
+  <h3>ورود مدیر</h3>
+  <div id="loginError"></div>
+  <input type="email" id="adminEmail" placeholder="ایمیل مدیر">
+  <input type="password" id="adminPassword" placeholder="رمز عبور">
+  <button onclick="login()">ورود</button>
+</div><div class="dashboard" style="display: none;" id="admin-dashboard">
+  <h2>افزودن محصول جدید</h2>
+  <form class="product-form" id="addProductForm">
     <input type="text" id="productName" placeholder="نام محصول">
     <input type="text" id="productDescription" placeholder="توضیحات">
-    <input type="number" id="productPrice" placeholder="قیمت">
-    <input type="text" id="productImage" placeholder="لینک تصویر">
-    <button onclick="addProduct()">افزودن</button>
-
-    <div id="product-list" class="product-list"></div>
+    <input type="number" id="productPrice" placeholder="قیمت (تومان)">
+    <input type="text" id="productImage" placeholder="لینک تصویر محصول">
+    <button type="submit">افزودن محصول</button>
+  </form>  <div class="product-list" id="product-list">
+    <!-- محصولات از Firebase بارگذاری می‌شوند -->
   </div>
-
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-  <script src="script.js"></script>
-</body>
+</div><!-- Firebase SDK --><script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script><script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script><!-- اسکریپت سایت --><script src="script.js"></script></body>
 </html>
